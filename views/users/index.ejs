@@ -1,0 +1,29 @@
+<% layout('./boilerplate') %>
+<h1 class="text-center mb-3">User Database</h1>
+<!-- <a href="/users/new">Join Now</a> -->
+<% let cnt = 1%>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Batch</th>
+        <th scope="col">Date of Joining</th>
+        <th scope="col">Payment Status</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        <% for(let user of users){%>
+            <tr>
+                <th scope="row"><%=cnt%></th>
+                <%cnt++;%>
+                <td><%=user.name%></td>
+                <td><%=user.currentBatch%></td>
+                <td><%=user.joinDate.toLocaleDateString()%></td>
+                <td><%if (user.paymentStatus===true){%>Paid<%}else{%>Pending<%}%></td>
+                <td><a class="btn btn-outline-info btn-sm" href="/users/<%=user._id%>">Details</a></td>
+            </tr>
+        <%}%>   
+    </tbody>
+  </table>

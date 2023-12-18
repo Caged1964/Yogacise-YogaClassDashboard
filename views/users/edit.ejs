@@ -1,0 +1,40 @@
+<% layout('./boilerplate') %>
+
+<div class="row">
+    <h1 class="text-center mb-3">User Data Updation Form</h1>
+    <div class="col-6 offset-3">
+        <form class="row g-3" action="/users/<%=user._id%>?_method=put" method="post">
+            <div>
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" type="text" id="name" name="user[name]" value="<%=user.name%>" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="phoneNumber">Phone Number</label>
+                <input class="form-control" type="text" id="phoneNumber" name="user[phoneNumber]" value="<%=user.phoneNumber%>" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" type="email" id="email" name="user[email]" value="<%=user.email%>" required>
+            </div>
+            <div>
+                <label class="form-label" for="address">Address</label>
+                <input class="form-control" type="text" id="address" name="user[address]" value="<%=user.address%>" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="name">Age</label>
+                <input class="form-control" type="number" id="age" name="user[age]" value="<%=user.age%>" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="currentBatch">Select Batch</label>
+                <select class="form-select" id="currentBatch" name="user[currentBatch]" required>
+                    <option value="6-7AM">6-7AM</option>
+                    <option value="7-8AM">7-8AM</option>
+                    <option value="8-9AM">8-9AM</option>
+                    <option value="5-6PM">5-6PM</option>
+                </select>
+            </div>
+            <button class="col-md-6 btn btn-success">Update</button>
+            <a class="col-md-6 btn btn-danger" href="/users/<%=user._id%>">Cancel</a>
+        </form>        
+    </div>
+</div>

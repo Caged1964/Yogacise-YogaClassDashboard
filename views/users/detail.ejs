@@ -1,0 +1,25 @@
+<% layout('./boilerplate') %>
+
+<div class="row">
+        <p class="display-6 col-md-6">Name:</p>
+        <p class="display-6 col-md-6"><%=user.name%></p>
+        <p class="display-6 col-md-6">Phone Number:</p>
+        <p class="display-6 col-md-6"><%=user.phoneNumber%></p>
+        <p class="display-6 col-md-6">Email:</p>
+        <p class="display-6 col-md-6"><%=user.email%></p>
+        <p class="display-6 col-md-6">Age:</p>
+        <p class="display-6 col-md-6"><%=user.age%></p>
+        <p class="display-6 col-md-6">Address:</p>
+        <p class="display-6 col-md-6"><%=user.address%></p>
+</div>
+
+<div class="mb-4">
+    <form action="/users/<%=user._id%>?_method=delete" method="post">
+        <a class="btn btn-info" href="/users/<%=user._id%>/edit">Edit User Data</a>
+        <button class="btn btn-danger">Delete User</button>
+    </form>
+</div>
+
+<footer>
+    <a class="btn btn-warning" href="/users">Go Back</a>
+</footer>
