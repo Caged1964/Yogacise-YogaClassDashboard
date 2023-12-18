@@ -1,7 +1,7 @@
 {
   "name": "yogaclasssys",
   "version": "1.0.0",
-  "description": "This web app facilitates easy enrollment for monthly yoga classes. Developed with HTML, CSS, JavaScript (frontend), and Node.js, Express.js, MongoDB (backend), the system validates, stores data, and simulates payments via a RESTful API.",
+  "description": "This web app facilitates easy enrollment for monthly yoga classes. Developed with JavaScript, Node.js, Express.js, MongoDB, the system validates, stores data, and simulates payments via a RESTful API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
